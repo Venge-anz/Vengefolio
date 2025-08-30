@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.font-tasa {
+  font-family: "TASA Orbiter", sans-serif;
+}
+
+.roboto-condensed {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+}

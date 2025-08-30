@@ -1,20 +1,41 @@
 export const Navbar = () => {
   return (
-    <div className="flex flex-row bg-gray-200 justify-between h-20 items-center pl-[100px] pr-[100px]">
-      <h1 className="flex flex-col font-bold text-lg">
-        VENGE <br></br>
-        <p className="italic text-sm font-light">Junior Developer</p>
-      </h1>
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+      <div className="max-w-[1200px] mx-auto flex justify-between items-center h-20 px-6 sm:px-10">
+        {/* Logo / Nombre */}
+        <h1 className="flex flex-col font-bold text-lg">
+          VENGE
+          <span className="italic text-sm font-light">Junior Developer</span>
+        </h1>
 
-      <ul className="flex flex-row gap-7 uppercase">
-        <li className="cursor-pointer hover:border-b">Home</li>
-        <li className="cursor-pointer hover:border-b">Skills</li>
-        <li className="cursor-pointer hover:border-b">Education</li>
-        <li className="cursor-pointer hover:border-b">Proyects</li>
-      </ul>
-      <button className="cursor-pointer border-purple-300 rounded-4xl p-2 bg-purple-400 font-bold text-white hover:bg-purple-500">
-        CONTACT
-      </button>
-    </div>
+        {/* Links */}
+        <div className="hidden md:flex flex-row gap-7 uppercase">
+          <a
+            href="#home"
+            className="cursor-pointer hover:border-b-2 border-purple-400"
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="cursor-pointer hover:border-b-2 border-purple-400"
+          >
+            About
+          </a>
+          <a
+            href="#education"
+            className="cursor-pointer hover:border-b-2 border-purple-400"
+          >
+            Education
+          </a>
+          <a
+            href="#proyects"
+            className="cursor-pointer hover:border-b-2 border-purple-400"
+          >
+            Proyects
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };

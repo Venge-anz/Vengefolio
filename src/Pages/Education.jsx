@@ -1,6 +1,6 @@
 export const Education = () => {
   return (
-    <div className="bg-gray-200 p-6 sm:p-10 rounded-xl border border-gray-300 flex-1">
+    <div className="bg-gray-200 p-6 sm:p-10 w-100 rounded-xl border border-gray-300 mt-15">
       <h2 className="text-center text-xl sm:text-2xl font-bold border-b-2 border-purple-400 pb-2 mb-4">
         EDUCATION
       </h2>

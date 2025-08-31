@@ -9,7 +9,7 @@ export const Navbar = () => {
         </h1>
 
         {/* Links */}
-        <div className="hidden md:flex flex-row gap-7 uppercase">
+        <div className="hidden md:flex flex-row gap-7 uppercase items-center">
           <a
             href="#home"
             className="cursor-pointer hover:border-b-2 border-purple-400"
@@ -23,17 +23,27 @@ export const Navbar = () => {
             About
           </a>
           <a
-            href="#education"
-            className="cursor-pointer hover:border-b-2 border-purple-400"
-          >
-            Education
-          </a>
-          <a
             href="#proyects"
             className="cursor-pointer hover:border-b-2 border-purple-400"
           >
             Proyects
           </a>
+          <a
+            href="#skills"
+            className="cursor-pointer hover:border-b-2 border-purple-400"
+          >
+            Skills
+          </a>
+
+          {/* Botón de contacto */}
+          <button
+            onClick={() =>
+              (window.location.href = "mailto:vengedev14@gmail.com")
+            }
+            className="cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 roboto-condensed"
+          >
+            RESUME
+          </button>
         </div>
       </div>
     </nav>

@@ -1,19 +1,19 @@
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Navbar } from "../Components/Navbar/Navbar";
-import { AboutMe } from "./AboutMe";
-import { Education } from "./Education";
+import { AboutMe } from "./AboutMe/AboutMe";
 import { Proyects } from "./Proyects";
 
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
+import { Skills } from "./Skills";
 
 export const Home = () => {
   return (
     <>
       <Navbar />
 
-      <div className="flex flex-col justify-center items-center p-4 min-h-screen mt-20">
-        <div className="flex flex-col w-full max-w-[1200px] m-5 bg-white rounded-3xl sm:rounded-5xl items-center justify-center p-6 sm:p-20 text-gray-500 gap-6">
+      <div className="flex flex-col justify-center items-center p-1 min-h-screen mt-20 gap-30">
+        <div className="flex flex-col w-full max-w-[1100px] bg-white rounded-3xl sm:rounded-5xl items-center justify-center p-6 sm:p-15 text-gray-500 gap-6">
           {/* Card principal */}
           <div className="flex flex-col sm:flex-row justify-between items-center rounded-xl border border-gray-300 font-tasa w-full p-6 sm:p-10">
             {/* Tarjeta nombre */}
@@ -40,10 +40,11 @@ export const Home = () => {
                   onClick={() =>
                     (window.location.href = "mailto:vengedev14@gmail.com")
                   }
-                  className="cursor-pointer text-gray-500 border-2 border-gray-300 rounded-lg p-2 font-bold  hover:bg-purple-200 hover:scale-110 roboto-condensed"
+                  className="cursor-pointer text-gray-500 border-2 border-gray-300 rounded-lg p-2 font-bold hover:text-white  hover:bg-purple-500 hover:scale-110 roboto-condensed"
                 >
                   CONTACT ME
                 </button>
+
                 <a
                   href="https://github.com/Venge-anz"
                   target="_blank"
@@ -74,9 +75,9 @@ export const Home = () => {
             {/* Tarjeta foto */}
             <div className="flex-shrink-0 rounded-2xl bg-purple-200">
               <img
-                src="/myPhoto.jpeg"
+                src="robotImage.png"
                 alt="myPhoto"
-                className="border-purple-200 border-4 rounded-2xl w-40 sm:w-60 hover:rotate-8 transform transition-transform duration-900"
+                className="border-purple-200 border-4 rounded-2xl sm:w-60 hover:rotate-8 transform transition-transform duration-900"
               />
             </div>
           </div>
@@ -92,18 +93,15 @@ export const Home = () => {
             <ExpandMoreIcon className="text-purple-500" />
           </div>
         </div>
-      </div>
-      <div id="about">
-        <AboutMe />
+        <div id="about">
+          <AboutMe />
+          <div id="proyects">
+            <Proyects />
+            <div id="skills"></div>
+            <Skills />
+          </div>
+        </div>
       </div>
     </>
   );
 };
-{
-  /* <div id="education">
-          <Education />
-        </div>
-        <div id="proyects">
-          <Proyects />
-        </div>{" "} */
-}

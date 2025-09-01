@@ -1,92 +1,78 @@
-import { FaCode } from "react-icons/fa6";
+import { BsTools } from "react-icons/bs";
 import { IoCodeSharp } from "react-icons/io5";
 import { BsWindowFullscreen } from "react-icons/bs";
 
 export const Skills = () => {
   return (
-    <div className=" flex flex-row sm:flex-col items-center">
-      {/* TITULO */}
-      <div className="flex flex-col w-full max-w-[1200px] justify-center p-6 text-gray-700 gap-10">
-        <h1 className="relative text-xl sm:text-4xl font-bold inline-block roboto-condensed ">
-          Skills
-          <span className="absolute left-0 bottom-0 w-10 border-b-4 rounded-4xl border-purple-500"></span>
-        </h1>
-        <p>
-          As a junior developer, I've gained experience with various tools and
-          frameworks in web development, especially on the frontend.
-        </p>
-        {/* SKILLS */}
+    <div className="w-full flex justify-center p-6">
+      <div className="w-full max-w-[1200px] text-gray-700 flex flex-col gap-10">
+        {/* TITULO */}
+        <div className="flex flex-col gap-4">
+          <h1 className="relative text-xl sm:text-3xl font-bold inline-block">
+            Skills
+            <span className="absolute left-0 bottom-0 w-10 border-b-4 rounded-full border-purple-500"></span>
+          </h1>
+          <p>
+            As a junior developer, I've gained experience with various tools and
+            frameworks in web development, especially on the frontend.
+          </p>
+        </div>
 
-        <div className="grid flex-col sm:grid-cols-3 gap-10">
-          {/* PROGRAMING LENGUAGES 1 */}
+        {/* SKILLS GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* PROGRAMMING LANGUAGES */}
           <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-7 p-5">
-              <h1 className="flex items-center gap-2 text-xl sm:text-base font-bold ">
-                <IoCodeSharp className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-120 hover:rotate-8"></IoCodeSharp>
+            <div className="flex flex-col gap-6 p-5">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
+                <IoCodeSharp className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
                 Programming Languages
-              </h1>
-              <div className="flex flex-row gap-3">
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
+              </h2>
+              <div className="flex gap-3 flex-wrap">
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   HTML/CSS
-                </div>
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   JavaScript
-                </div>
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-300 flex-1 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-7 p-5">
-              <h1 className="flex items-center gap-2 text-xl sm:text-base font-bold ">
-                <BsWindowFullscreen className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-120 hover:rotate-8"></BsWindowFullscreen>
+          {/* FRONTEND DEVELOPMENT */}
+          <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
+            <div className="flex flex-col gap-6 p-5">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
+                <BsWindowFullscreen className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
                 Frontend Development
-              </h1>
-              <div className="flex flex-row gap-3">
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">React</div>
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
+              </h2>
+              <div className="flex gap-3 flex-wrap">
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  React
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   Tailwind CSS
-                </div>
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   Bootstrap
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl border border-gray-300 flex-1 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-7 p-5">
-              <h1 className="flex items-center gap-2 text-xl sm:text-base font-bold ">
-                <FaCode className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-120 hover:rotate-8"></FaCode>
-                Backend Development
-              </h1>
-              <div className="flex flex-row gap-3">
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
-                  Node.js
-                </div>
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   Rest APIs
-                </div>
+                </span>
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl border border-gray-300 flex-1 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-7 p-5">
-              <h1 className="text-xl sm:text-base font-bold ">Databases</h1>
-              <div className="flex flex-row gap-3">
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">
-                  Firebase
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-xl border border-gray-300 flex-1 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-7 p-5">
-              <h1 className="text-xl sm:text-base font-bold ">Tools</h1>
-              <div className="flex flex-row gap-3">
-                <div className="bg-gray-200 rounded-full pr-2 pl-2">Git</div>
+          {/* TOOLS */}
+          <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
+            <div className="flex flex-col gap-6 p-5">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
+                <BsTools className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
+                Tools
+              </h2>
+              <div className="flex gap-3 flex-wrap">
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Git
+                </span>
               </div>
             </div>
           </div>

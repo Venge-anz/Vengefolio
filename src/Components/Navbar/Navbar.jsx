@@ -4,7 +4,7 @@ export const Navbar = () => {
       <div className="max-w-[1200px] mx-auto flex justify-between items-center h-20 px-6 sm:px-10">
         {/* Logo / Nombre */}
         <h1 className="flex flex-col font-bold text-lg">
-          VENGE
+          VENGEDEV
           <span className="italic text-sm font-light">Junior Developer</span>
         </h1>
 
@@ -40,7 +40,7 @@ export const Navbar = () => {
             onClick={() =>
               (window.location.href = "mailto:vengedev14@gmail.com")
             }
-            className="cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 roboto-condensed"
+            className="cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 "
           >
             RESUME
           </button>

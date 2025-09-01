@@ -8,7 +8,7 @@ export const AboutMe = () => {
     <div className="flex flex-row sm:flex-col items-center">
       {/* TITULO */}
       <div className="flex flex-col w-full max-w-[1200px] justify-center p-6 text-gray-700 gap-10">
-        <h1 className="relative text-xl sm:text-4xl font-bold inline-block roboto-condensed ">
+        <h1 className="relative text-xl sm:text-3xl font-bold inline-block rubik  ">
           About Me
           <span className="absolute left-0 bottom-0 w-10 border-b-4 rounded-4xl border-purple-500"></span>
         </h1>

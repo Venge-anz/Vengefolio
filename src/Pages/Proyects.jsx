@@ -20,11 +20,7 @@ export const Proyects = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* PROYECTO 1 */}
           <div className="bg-white rounded-xl border border-gray-300 flex flex-col transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <img
-              src="/imagenProyecto.jpg"
-              alt="proyecto1"
-              className="rounded-t-xl"
-            />
+            <img src="/proyect1.png" alt="proyecto1" className="rounded-t-xl" />
             <div className="flex flex-col justify-between flex-1 gap-3 p-5">
               <div>
                 <h2 className="text-xl font-bold">
@@ -66,11 +62,7 @@ export const Proyects = () => {
 
           {/* PROYECTO 2 */}
           <div className="bg-white rounded-xl border border-gray-300 flex flex-col transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <img
-              src="/imagenProyecto.jpg"
-              alt="proyecto2"
-              className="rounded-t-xl"
-            />
+            <img src="/proyect2.png" alt="proyecto2" className="rounded-t-xl" />
             <div className="flex flex-col justify-between flex-1 gap-3 p-5">
               <div>
                 <h2 className="text-xl font-bold">
@@ -116,7 +108,7 @@ export const Proyects = () => {
           {/* PROYECTO 3 */}
           <div className="bg-white rounded-xl border border-gray-300 flex flex-col transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
             <img
-              src="/imagenProyecto.jpg"
+              src="/proyect3.jpeg"
               alt="proyecto3"
               className="rounded-t-xl"
             />

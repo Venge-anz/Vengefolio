@@ -36,14 +36,11 @@ export const Navbar = () => {
           </a>
 
           {/* Botón de contacto */}
-          <button
-            onClick={() =>
-              (window.location.href = "mailto:vengedev14@gmail.com")
-            }
-            className="cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 "
-          >
-            RESUME
-          </button>
+          <a href="/CV.pdf" download>
+            <button className="cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 ">
+              RESUME
+            </button>
+          </a>
         </div>
       </div>
     </nav>

@@ -92,17 +92,17 @@ export const Home = () => {
             <ExpandMoreIcon className="text-purple-500" />
           </div>
         </div>
-        <div id="about">
+        <div id="about" className="scroll-mt-26">
           <AboutMe />
         </div>
-        <div id="proyects">
+        <div id="proyects" className="scroll-mt-26">
           <Proyects />
         </div>
-        <div id="skills">
+        <div id="skills" className="scroll-mt-26">
           <Skills />
         </div>
 
-        <div id="contact">
+        <div id="contact" className="scroll-mt-26">
           <Contact />
         </div>
       </div>

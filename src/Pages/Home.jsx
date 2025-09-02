@@ -7,13 +7,14 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
 import { Skills } from "./Skills";
 import { Contact } from "./Contact";
+import { Footer } from "../Components/Footer";
 
 export const Home = () => {
   return (
     <>
       <Navbar />
 
-      <div className="flex flex-col justify-center items-center p-1 min-h-screen gap-30 mt-30 bg-gray-100">
+      <div className="flex flex-col justify-center items-center p-1 min-h-screen gap-30 bg-gray-100 pt-30">
         <div className="flex flex-col w-full max-w-[1200px] bg-white rounded-3xl sm:rounded-5xl items-center justify-center p-6 sm:p-15 text-gray-500 gap-6">
           {/* Card principal */}
           <div className="flex flex-col sm:flex-row justify-between items-center rounded-xl border border-gray-300 font-tasa w-full p-6 sm:p-10">
@@ -100,10 +101,12 @@ export const Home = () => {
         <div id="skills">
           <Skills />
         </div>
+
         <div id="contact">
           <Contact />
         </div>
       </div>
+      <Footer />
     </>
   );
 };

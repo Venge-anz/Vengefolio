@@ -29,13 +29,12 @@ export const Profile = () => {
           <div className="bg-yellow-200 rounded-full pr-2 pl-2">JavaScript</div>
           <div className="bg-green-200 rounded-full pr-2 pl-2">CSS</div>
         </div>
-        <button
-          onClick={() => (window.location.href = "mailto:vengedev14@gmail.com")}
-          className="flex flex-row justify-center gap-2 items-center cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 roboto-condensed"
-        >
-          <IoDownloadOutline></IoDownloadOutline>
-          Download Resume
-        </button>
+        <a href="/CV.pdf" download>
+          <button className="flex flex-row justify-center gap-2 items-center cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 roboto-condensed">
+            <IoDownloadOutline></IoDownloadOutline>
+            Download Resume
+          </button>
+        </a>
       </div>
     </div>
   );

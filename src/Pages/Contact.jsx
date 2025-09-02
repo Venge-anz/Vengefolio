@@ -2,8 +2,79 @@ import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { CgMail } from "react-icons/cg";
+import { MdDone } from "react-icons/md";
+
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 export const Contact = () => {
+  const [isSent, setisSent] = useState(false);
+
+  const [formState, setFormState] = useState({
+    name: "",
+    subject: "",
+    message: "",
+    email: "",
+  });
+
+  const [formStateError, setFormStateError] = useState(false);
+
+  const handleChangeInput = (e) => {
+    console.log(e.target.value);
+    const fieldName = e.target.id;
+    setFormState((prev) => {
+      return {
+        ...prev,
+        [fieldName]: e.target.value,
+      };
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      formState.email &&
+      formState.message &&
+      formState.name &&
+      formState.subject
+    ) {
+      emailjs
+        .send(
+          "service_jbf4fyh",
+          "template_bfszwp4",
+          {
+            title: formState.subject,
+            name: formState.name,
+            message: formState.message,
+            email: formState.email,
+          },
+          {
+            limitRate: {
+              id: "app",
+              throttle: 10000,
+            },
+            publicKey: "acTxOzMB5Jctopglv",
+          }
+        )
+        .then(() => {
+          setFormState({
+            name: "",
+            subject: "",
+            message: "",
+            email: "",
+          });
+          setisSent(true);
+
+          setTimeout(() => {
+            setisSent(false);
+          }, 3000);
+        });
+    } else {
+      setFormStateError(true);
+    }
+  };
+
   return (
     <div className="w-full flex justify-center p-6">
       <div className="w-full max-w-[1200px] text-gray-700 flex flex-col gap-10">
@@ -20,9 +91,9 @@ export const Contact = () => {
         </div>
 
         {/* CONTACTO Y FORMULARIO */}
-        <div className="flex flex-col sm:flex-row gap-10">
+        <div className="flex flex-col sm:flex-row gap-59">
           {/* CONTACT INFORMATION */}
-          <div className="flex-1 flex flex-col gap-6">
+          <div className="flex-1 flex flex-col gap-10">
             <div>
               <h2 className="font-bold text-xl">Contact information</h2>
               <p>
@@ -80,21 +151,33 @@ export const Contact = () => {
 
           {/* FORMULARIO */}
           <div className="flex-1 bg-white rounded-xl border border-gray-300 p-6 shadow-lg">
-            <form className="flex flex-col gap-5">
+            <form
+              id="form"
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-5"
+            >
               <div className="flex flex-col sm:flex-row sm:gap-4">
                 <div className="flex-1 flex flex-col">
                   <label className="mb-1">Your Name</label>
                   <input
+                    id="name"
+                    value={formState.name}
                     type="text"
+                    onChange={(e) => handleChangeInput(e)}
                     placeholder="David G."
+                    required
                     className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full"
                   />
                 </div>
                 <div className="flex-1 flex flex-col mt-4 sm:mt-0">
                   <label className="mb-1">Your Email</label>
                   <input
+                    onChange={(e) => handleChangeInput(e)}
+                    id="email"
+                    value={formState.email}
                     type="email"
                     placeholder="david@example.com"
+                    required
                     className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full"
                   />
                 </div>
@@ -104,7 +187,11 @@ export const Contact = () => {
                 <label className="mb-1">Subject</label>
                 <input
                   type="text"
+                  onChange={(e) => handleChangeInput(e)}
+                  id="subject"
+                  value={formState.subject}
                   placeholder="How can I help you?"
+                  required
                   className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full"
                 />
               </div>
@@ -112,19 +199,38 @@ export const Contact = () => {
               <div className="flex flex-col">
                 <label className="mb-1">Message</label>
                 <textarea
+                  id="message"
+                  onChange={(e) => handleChangeInput(e)}
+                  value={formState.message}
                   placeholder="Message"
+                  required
                   rows={5}
                   className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 w-full resize-none"
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                className="bg-purple-400 hover:bg-purple-500 text-white font-bold rounded-lg p-2 w-full sm:w-auto transition"
-              >
-                Send Message
-              </button>
+              {isSent === false ? (
+                <button
+                  type="submit"
+                  className="bg-purple-400 hover:bg-purple-500 text-white font-bold rounded-lg p-2 w-full sm:w-auto transition cursor-pointer"
+                >
+                  Send Message
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="bg-purple-400 hover:bg-purple-500 text-white font-bold rounded-lg p-2 w-full sm:w-auto transition cursor-pointer"
+                >
+                  <div className="flex flex-row gap-2 items-center justify-center">
+                    Sent successfully
+                    <MdDone />
+                  </div>
+                </button>
+              )}
             </form>
+            {formStateError && (
+              <div className="mt-5 text-red-700">Error, please try again. </div>
+            )}
           </div>
         </div>
       </div>

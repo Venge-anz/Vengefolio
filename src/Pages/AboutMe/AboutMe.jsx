@@ -43,6 +43,7 @@ export const AboutMe = () => {
                       Web Programming
                       <span> (2024 - Present)</span>
                     </li>
+
                     <li>
                       Higher Education in Administration and Finance -
                       (2016-2017)

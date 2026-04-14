@@ -1,7 +1,7 @@
-import FeedOutlinedIcon from "@mui/icons-material/FeedOutlined";
-import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-import WorkOutlineOutlinedIcon from "@mui/icons-material/WorkOutlineOutlined";
-import { Profile } from "./Profile";
+import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
+import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
+import WorkOutlineOutlinedIcon from '@mui/icons-material/WorkOutlineOutlined';
+import { Profile } from './Profile';
 
 export const AboutMe = () => {
   return (
@@ -39,16 +39,28 @@ export const AboutMe = () => {
                 </div>
                 <div>
                   <ul className="list-none text-gray-700 max-w-[800px] mx-auto mt-6 space-y-2 text-sm">
-                    <li className="font-bold">
-                      Web Programming
-                      <span> (2024 - Present)</span>
+                    <li>
+                      <span className="font-bold">Fullstack Developer</span> -
+                      Socratech
+                    </li>
+                    <li>
+                      {' '}
+                      <span className="font-bold">Curso de React</span> -
+                      Devtalles
                     </li>
 
                     <li>
-                      Higher Education in Administration and Finance -
-                      (2016-2017)
+                      {' '}
+                      <span className="font-bold">JavaScript Moderno</span> -
+                      Devtalles
                     </li>
-                    <li>Administrative Management (2013-2014)</li>
+                    <li>
+                      {' '}
+                      <span className="font-bold">
+                        Ciclo superior de Administración y Finanzas
+                      </span>{' '}
+                      - IE.S Leonardo Da Vinci
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -61,17 +73,22 @@ export const AboutMe = () => {
                 <div>
                   <ul className="list-none text-gray-700 max-w-[800px] mx-auto mt-6 space-y-2 text-sm">
                     <li>
-                      Laundry Technician – Lavatech Producción (2021 – Oct 2024)
+                      {' '}
+                      <span className="font-bold">Administrative</span> -
+                      ElectroStocks (04/2021 - 11/2025)
                     </li>
                     <li>
-                      Waitress / Bartender – Various Restaurants (2019 – 2021)
-                    </li>
-                    <li>Administrative Assistant – Ganasalud (2018 – 2019)</li>
-                    <li>
-                      Administrative Assistant – Electrostocks (2017 – 2018)
+                      {' '}
+                      <span className="font-bold">Administrative</span> -
+                      Ganasalud (03/2016 - 11/2019)
                     </li>
                     <li>
-                      Receptionist – Ayuntamiento de San Vicente (2013 – 2014)
+                      {' '}
+                      <span className="font-bold">
+                        Receptionist / Administrative
+                      </span>{' '}
+                      - San Vicente del Raspeig Town Hall - Alicante (05/2013 -
+                      02/2014)
                     </li>
                   </ul>
                 </div>

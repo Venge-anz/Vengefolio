@@ -1,13 +1,13 @@
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Navbar } from "../Components/Navbar/Navbar";
-import { AboutMe } from "./AboutMe/AboutMe";
-import { Proyects } from "./Proyects";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Navbar } from '../Components/Navbar/Navbar';
+import { AboutMe } from './AboutMe/AboutMe';
+import { Proyects } from './Proyects';
 
-import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { CgMail } from "react-icons/cg";
-import { Skills } from "./Skills";
-import { Contact } from "./Contact";
-import { Footer } from "../Components/Footer";
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import { CgMail } from 'react-icons/cg';
+import { Skills } from './Skills';
+import { Contact } from './Contact';
+import { Footer } from '../Components/Footer';
 
 export const Home = () => {
   return (
@@ -15,7 +15,7 @@ export const Home = () => {
       <Navbar />
 
       <div className="flex flex-col justify-center items-center p-1 min-h-screen gap-30 bg-gray-100 pt-30">
-        <div className="flex flex-col w-full max-w-[1200px] bg-white rounded-3xl sm:rounded-5xl items-center justify-center p-6 sm:p-15 text-gray-500 gap-6">
+        <div className="flex flex-col  w-full max-w-[1200px] bg-white rounded-3xl sm:rounded-5xl items-center justify-center p-6 sm:p-15 text-gray-500 gap-6">
           {/* Card principal */}
           <div className="flex flex-col sm:flex-row justify-between items-center rounded-xl border border-gray-300 font-tasa w-full p-6 sm:p-10">
             {/* Tarjeta nombre */}
@@ -23,15 +23,15 @@ export const Home = () => {
               <h1 className="flex flex-col gap-4 font-bold text-center sm:text-left">
                 Hey, my name is
                 <span className="text-purple-300 text-5xl sm:text-7xl lobster-regular">
-                  {"<Claudia>"}
+                  {'<Claudia>'}
                 </span>
                 <span className="text-xl sm:text-2xl font-extralight roboto-condensed">
-                  Junior Frontend Developer
+                  Full Stack Developer
                 </span>
               </h1>
 
               <p className="mt-6 sm:mt-10 text-center sm:text-left">
-                Junior developer focused on learning, building,<br></br>
+                Full Stack Developer focused on learning, building,<br></br>
                 and transforming ideas into digital experiences.
               </p>
 
@@ -43,38 +43,31 @@ export const Home = () => {
                 >
                   CONTACT ME
                 </a>
+                <div className="flex sm:flex-row gap-4 mb-4 md:mb-0">
+                  <a
+                    href="https://github.com/Venge-anz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-800 hover:text-purple-500 transition"
+                  >
+                    <FiGithub className=" w-6 h-6 text-purple-500 transform transition hover:scale-120 hover:rotate-8 " />
+                  </a>
 
-                <a
-                  href="https://github.com/Venge-anz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-gray-800 hover:text-purple-500 transition"
-                >
-                  <FiGithub className=" w-6 h-6 text-purple-500 transform transition hover:scale-120 hover:rotate-8" />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/claudia-vivo-rosa-97795b161/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FiLinkedin className=" w-6 h-6 text-purple-500 transform transition hover:scale-120 hover:rotate-8" />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/claudia-vivo-rosa-97795b161/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <CgMail className=" w-6 h-6 text-purple-500 transform transition hover:scale-120 hover:rotate-8" />
-                </a>
+                  <a
+                    href="https://www.linkedin.com/in/claudia-vivo-rosa-97795b161/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiLinkedin className=" w-6 h-6 text-purple-500 transform transition hover:scale-120 hover:rotate-8" />
+                  </a>
+                </div>
               </div>
             </div>
 
             {/* Tarjeta foto */}
             <div className="flex-shrink-0 rounded-2xl bg-purple-200">
               <img
-                src="code.png"
+                src="code2.png"
                 alt="myPhoto"
                 className="border-purple-200 border-4 rounded-2xl sm:w-130 hover:rotate-8 transform transition-transform duration-900"
               />

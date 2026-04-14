@@ -1,6 +1,6 @@
-import { BsTools } from "react-icons/bs";
-import { IoCodeSharp } from "react-icons/io5";
-import { BsWindowFullscreen } from "react-icons/bs";
+import { BsTools } from 'react-icons/bs';
+import { IoCodeSharp } from 'react-icons/io5';
+import { BsWindowFullscreen } from 'react-icons/bs';
 
 export const Skills = () => {
   return (
@@ -20,34 +20,28 @@ export const Skills = () => {
 
         {/* SKILLS GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {/* PROGRAMMING LANGUAGES */}
+          {/* FRONTEND */}
           <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
             <div className="flex flex-col gap-6 p-5">
               <h2 className="flex items-center gap-2 text-lg font-bold">
                 <IoCodeSharp className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
-                Programming Languages
-              </h2>
-              <div className="flex gap-3 flex-wrap">
-                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
-                  HTML/CSS
-                </span>
-                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
-                  JavaScript
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* FRONTEND DEVELOPMENT */}
-          <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
-            <div className="flex flex-col gap-6 p-5">
-              <h2 className="flex items-center gap-2 text-lg font-bold">
-                <BsWindowFullscreen className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
-                Frontend Development
+                Frontend
               </h2>
               <div className="flex gap-3 flex-wrap">
                 <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   React
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  JavaScript ES6
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  TypeScript
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  HTML5
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  CSS
                 </span>
                 <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   Tailwind CSS
@@ -56,7 +50,37 @@ export const Skills = () => {
                   Bootstrap
                 </span>
                 <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
-                  Rest APIs
+                  SASS
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Responsive design
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Grid / Flexbox
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* BACKEND */}
+          <div className="bg-white rounded-xl border border-gray-300 transform transition hover:-translate-y-2 hover:shadow-2xl duration-300">
+            <div className="flex flex-col gap-6 p-5">
+              <h2 className="flex items-center gap-2 text-lg font-bold">
+                <BsWindowFullscreen className="bg-purple-200 text-purple-600 rounded w-6 h-6 p-1 transform transition hover:scale-110 hover:rotate-6" />
+                Backend
+              </h2>
+              <div className="flex gap-3 flex-wrap">
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Node.js
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Express
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  MySQL
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  Rest API's / Rest API Development
                 </span>
               </div>
             </div>
@@ -72,6 +96,9 @@ export const Skills = () => {
               <div className="flex gap-3 flex-wrap">
                 <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
                   Git
+                </span>
+                <span className="bg-gray-200 rounded-full px-3 py-1 text-sm">
+                  GitHub
                 </span>
               </div>
             </div>

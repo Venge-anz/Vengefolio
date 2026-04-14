@@ -1,4 +1,4 @@
-import { IoDownloadOutline } from "react-icons/io5";
+import { IoDownloadOutline } from 'react-icons/io5';
 
 export const Profile = () => {
   return (
@@ -20,16 +20,23 @@ export const Profile = () => {
       </div>
       <div className="flex flex-col p-2">
         <h1 className="text-xl sm:text-2xl font-bold">Claudia Vivo</h1>
-        <p className="text-gray-500">Junior Developer</p>
+        <p className="text-gray-500">Fullstack Developer</p>
       </div>
       {/* //Skilss */}
       <div className="flex flex-col gap-6">
         <div className="flex flex-wrap gap-2 font-semibold text-sm">
-          <div className="bg-purple-200 rounded-full pr-2 pl-2">React</div>
-          <div className="bg-yellow-200 rounded-full pr-2 pl-2">JavaScript</div>
-          <div className="bg-green-200 rounded-full pr-2 pl-2">CSS</div>
+          <div className="bg-purple-200 rounded-full px-2">React</div>
+          <div className="bg-yellow-200 rounded-full px-2">JavaScript</div>
+          <div className="bg-green-200 rounded-full px-2">CSS</div>
+          <div className="bg-teal-200 rounded-full px-2">Tailwind</div>
+          <div className="bg-emerald-200 rounded-full px-2">Vite</div>
+
+          {/* Backend */}
+          <div className="bg-pink-200 rounded-full px-2">Node.js</div>
+          <div className="bg-indigo-200 rounded-full px-2">Express</div>
+          <div className="bg-red-200 rounded-full px-2">MySQL</div>
         </div>
-        <a href="/CV.pdf" download>
+        <a href="/CV26.pdf" download>
           <button className="flex flex-row justify-center gap-2 items-center cursor-pointer border-purple-300 rounded-lg p-2 bg-purple-400 font-bold text-white hover:bg-purple-500 roboto-condensed">
             <IoDownloadOutline></IoDownloadOutline>
             Download Resume
